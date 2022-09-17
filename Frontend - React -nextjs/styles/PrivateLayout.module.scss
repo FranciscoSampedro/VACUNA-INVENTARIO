@@ -1,0 +1,31 @@
+.code-box-demo {
+    text-align: center;
+}
+
+.custom_layout_principal {
+    height: 100vh;
+
+}
+
+
+.custom_ant_layout_header,
+
+.custom_ant_layout_sider {
+    color: #fff;
+    line-height: 120px;
+    background: #2386DC;
+}
+
+
+.ant-layout-sider {
+    background: #2386DC;
+}
+
+.custom_ant_layout_content {
+    min-height: 70vh;
+    max-height: 100 vh;
+    color: rgb(255, 255, 255);
+    line-height: 120px;
+    background: #f0f2f5;
+    // display: inline
+}
