@@ -2,7 +2,7 @@
 Reto Kruger inventario de vacuna empleados
 
 #
-##Frontend 
+## Frontend 
 Realizado en React:
 -Framework Nextjs
 -Framework UI Antdesign
