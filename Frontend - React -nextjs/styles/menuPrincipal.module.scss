@@ -1,0 +1,36 @@
+.container_menu {
+    background: rgba(255, 255, 255, 0);
+}
+
+
+.container_menu a {
+    font-weight: bold;
+    color: #004e92;
+}
+
+.container_menu hr {
+    border-color: #fff;
+}
+
+.container_menu button {
+    font-weight: bold;
+    color: #004e92;
+}
+
+.container_menu h4 {
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu_button:hover {
+    background: #fff;
+    border-radius: 8px;
+    border-color: #004e92;
+    color: #004e92;
+}
+
+.menu_button {
+    color: #fff;
+    border-radius: 8px;
+    background: #004e92;
+}

@@ -1,0 +1,56 @@
+.container_root {
+    min-height: 75vh;
+    max-height: 80vh;
+}
+
+.col_image_home {
+    background: #fff;
+    border-color: #004e92;
+    border-width: 1px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.card_info_full_info_user {
+    color: #004e92;
+
+}
+
+.card_pass_full_info_user {
+    color: #004e92;
+    border-color: #004e92;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 5px;
+}
+
+.card_edit_full_info_user {
+    color: #004e92;
+    border-color: #004e92;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 5px;
+}
+
+.title_home {
+    padding: 8px;
+    border-color: #004e92;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+    background: #fff;
+    font-weight: bold;
+    color: #004e92;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+.card_container {
+    width: 100%;
+    border: 1px solid #004e92;
+}

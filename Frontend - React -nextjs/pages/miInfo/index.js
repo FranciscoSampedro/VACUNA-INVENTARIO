@@ -1,6 +1,5 @@
 import PrivateLayout from 'components/layouts/privateApp'
 import { StarTwoTone } from '@ant-design/icons'
-import Employees from 'components/modules/employees'
 
 export default function Root() {
 
@@ -8,10 +7,8 @@ export default function Root() {
     <>
      <PrivateLayout>
          <section style={{ paddingLeft: "52px", paddingTop: "0px", paddingRight: "50px", paddingBottom: "0px", height: "90px" }} >
-            <h3><StarTwoTone />Empleados</h3>
+            <h3><StarTwoTone />Mi Información</h3>
           </section>
-      <Employees></Employees>    
-       
      </PrivateLayout>
     </>
   )
