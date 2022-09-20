@@ -7,7 +7,7 @@ import { Modal, Input } from 'antd'
 export default function useEmployees() {
   const [isEditing, setIsEditing] = useState(false);
   const [editingEmployee, setEditingEmployee] = useState(null);
-
+  const [modalInsert,setModalInsert] = useState(false);
   const onEditEmployee = (record) => {
     setIsEditing(true);
     setEditingEmployee({ ...record });
@@ -23,11 +23,15 @@ export default function useEmployees() {
       okType: "danger",
       onOk: () => {
         setDataSource((pre) => {
+          deleteEmployee(record.id);
           return pre.filter((Employee) => Employee.id !== record.id);
         });
       },
     });
   };
+  const openCloseModalInsert = ()=>{
+    setModalInsert(!modalInsert)
+  }
   const [dataSource, setDataSource] = useState([])
   const headerColumnsEmployees = [{
     key: "1",
@@ -51,6 +55,11 @@ export default function useEmployees() {
   },
   {
     key: "5",
+    title:'Cédula',
+    dataIndex:'cedula'
+  },
+  {
+    key: "6",
     title: "Acciones",
     render: (record) => {
       return (
@@ -80,14 +89,20 @@ export default function useEmployees() {
         console.log(data)
         setDataSource(data.data)
       })
-
+  }
+  const deleteEmployee=(id)=>{
+    clientBakendCore
+    .delete(apisBackendCore.users.delete_User(id))
   }
   return {
     headerColumnsEmployees,
     dataSource,
     isEditing,
     editingEmployee,
+    modalInsert,
     resetEditing,
-    getAllData
+    openCloseModalInsert,
+    getAllData,
+    deleteEmployee
   }
 }

@@ -2,8 +2,10 @@ import useEmployees from "hooks/users/useEmployees";
 import TableRender from 'components/elements/table/tableRender'
 import {useEffect} from 'react'
 import { Modal, Input } from 'antd'
+
+import BtnModalAddEmployee from "./btnModalAddEmployee";
 const Employess = (props) => {
-  const { headerColumnsEmployees, dataSource, getAllData, isEditing, editingEmployee,resetEditing } = useEmployees();
+  const { headerColumnsEmployees, dataSource, getAllData, isEditing, editingEmployee, modalInsert, resetEditing, openCloseModalInsert } = useEmployees();
 
      useEffect(() => {
        getAllData() 
@@ -11,10 +13,11 @@ const Employess = (props) => {
 
 return(
     <>
+    <BtnModalAddEmployee modalInsert={modalInsert} openCloseModalInsert={openCloseModalInsert} />
     <TableRender columns={headerColumnsEmployees} dataSource={dataSource}></TableRender>
     <Modal
       title="Editar Empleado"
-      visible={isEditing}
+      open={isEditing}
       okText="Guardar"
       onCancel={() => {
         resetEditing();
